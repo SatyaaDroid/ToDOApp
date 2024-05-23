@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ToDoApp</string>
+
+    <string name="loading">Loading</string>
+    <string name="todo_app">ToDo App</string>
+    <string name="press_the_button_to_add_a_todo_item">" Press the + button to add a TODO item"</string>
+    <string name="search">Search..</string>
+</resources>

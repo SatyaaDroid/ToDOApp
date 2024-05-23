@@ -95,9 +95,9 @@ private fun MySaveFloatingButton(
         FloatingActionButton(
             onClick = {
                 Log.v("sdas", toDoString)
-                if(toDoString.contentEquals("Error")){
+                if(toDoString.equals("Error",ignoreCase = true)){
                     showError(navController,toDoString,context)
-                }else if (!toDoString.equals("")) {
+                }else if (toDoString != "") {
                     saveToDoItem(navController, saveToDOItemsViewModel, toDoString)
                 }
             },

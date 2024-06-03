@@ -7,6 +7,7 @@ import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
@@ -54,7 +55,8 @@ fun EditTodoScreen(
         Loading()
     } else {
         Scaffold(
-            modifier = Modifier.fillMaxSize(),
+            modifier = Modifier.fillMaxSize()
+                .imePadding(),
             topBar = {
                 TopAppBar(
                     title = {
@@ -70,7 +72,7 @@ fun EditTodoScreen(
             floatingActionButton = { ->
                 MySaveFloatingButton(navController, saveToDOItemsViewModel, toDoString,context)
             },
-            floatingActionButtonPosition = FabPosition.Center,
+            floatingActionButtonPosition = FabPosition.End,
             content = { paddingValues ->
                 EditTodo(
                     paddingValues = paddingValues,
